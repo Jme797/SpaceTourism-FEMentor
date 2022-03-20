@@ -165,7 +165,15 @@ exports.normalizePathTrailingSlash = void 0;
 function removePathTrailingSlash(path) {
     return path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
 }
-const normalizePathTrailingSlash =  false ? 0 : removePathTrailingSlash;
+const normalizePathTrailingSlash =  true ? (path)=>{
+    if (/\.[^/]+\/?$/.test(path)) {
+        return removePathTrailingSlash(path);
+    } else if (path.endsWith('/')) {
+        return path;
+    } else {
+        return path + '/';
+    }
+} : 0;
 exports.normalizePathTrailingSlash = normalizePathTrailingSlash; //# sourceMappingURL=normalize-trailing-slash.js.map
 
 

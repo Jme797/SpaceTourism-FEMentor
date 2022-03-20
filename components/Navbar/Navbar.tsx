@@ -21,7 +21,7 @@ const Navbar: FunctionComponent = ({ }: Props) => {
           {links.map((link, i) => (
             <li key={i}>
               <Link href={link.url}>
-                {`${isDesktop ? link.step : ""} ${link.name}`}
+                <a>{`${isDesktop ? link.step : ""} ${link.name}`}</a>
               </Link>
             </li>
           ))}
@@ -42,7 +42,7 @@ const Navbar: FunctionComponent = ({ }: Props) => {
           {links.map((link, i) => (
             <li key={i}>
               <Link href={link.url}>
-                {`${link.step} ${link.name}`}
+                <a>{`${link.step} ${link.name}`}</a>
               </Link>
             </li>
           ))}

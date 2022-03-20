@@ -257,7 +257,9 @@ const Navbar = ({})=>{
                     children: links.map((link, i)=>/*#__PURE__*/ jsx_runtime_.jsx("li", {
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
                                 href: link.url,
-                                children: `${isDesktop ? link.step : ""} ${link.name}`
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                    children: `${isDesktop ? link.step : ""} ${link.name}`
+                                })
                             })
                         }, i)
                     )
@@ -285,7 +287,9 @@ const Navbar = ({})=>{
                     children: links.map((link, i)=>/*#__PURE__*/ jsx_runtime_.jsx("li", {
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
                                 href: link.url,
-                                children: `${link.step} ${link.name}`
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                    children: `${link.step} ${link.name}`
+                                })
                             })
                         }, i)
                     )
