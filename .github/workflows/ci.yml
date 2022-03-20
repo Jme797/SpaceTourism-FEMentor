@@ -50,6 +50,12 @@ jobs:
           key: build-${{ github.sha }}
           path: ./*
 
+      - name: Set Git Config
+        run: |
+          git config --global user.email "${{secrets.EMAIL}}"
+          git config --global user.name "Github Actions"
+          git config http.postBuffer 524288000
+
       - name: Commit built files
         run: |
           git add . -f
