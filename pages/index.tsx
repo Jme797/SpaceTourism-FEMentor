@@ -4,7 +4,7 @@ import Link from 'next/link'
 import PageHead from '../components/PageHead/PageHead'
 import { breakpoints } from '../Config'
 import useBreakpoint from '../Hooks/useBreakpoint'
-import { FixedBottom } from '../Layout/FixedBottom/Fixed'
+import { FixedBottom } from '../Layout/Fixed/Fixed'
 import PageContainer from '../Layout/PageContainer/PageContainer'
 import TwoColumn from '../Layout/TwoColumn/TwoColumn'
 
