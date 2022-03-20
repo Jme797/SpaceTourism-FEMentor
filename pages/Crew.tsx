@@ -5,12 +5,10 @@ import PageHead from '../components/PageHead/PageHead'
 import { breakpoints, Server } from '../Config'
 import TwoColumn from '../Layout/TwoColumn/TwoColumn'
 import SlideDotControls from "../components/SlideDotControls/SlideDotControls"
-import { FixedBottom } from "../Layout/FixedBottom/Fixed"
+import { FixedBottom } from "../Layout/Fixed/Fixed"
 import PageContainer from "../Layout/PageContainer/PageContainer"
 import useSwipeable from "../Hooks/useSwipeable"
-import { relative } from "path"
 import PageHeader from "../components/PageHeader/PageHeader"
-import useBreakpoint from "../Hooks/useBreakpoint"
 
 interface CrewObject {
   name: string,
