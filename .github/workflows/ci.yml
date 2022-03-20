@@ -68,5 +68,5 @@ jobs:
 
       - name: Push Live
         run: |
-          git push live main -f
+          git push origin main -f
 
