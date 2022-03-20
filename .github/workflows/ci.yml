@@ -63,7 +63,7 @@ jobs:
 
       - name: Add git remote
         run: |
-          git add origin jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
+          git remote add origin jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
 
       - name: Push Live
         run: |
