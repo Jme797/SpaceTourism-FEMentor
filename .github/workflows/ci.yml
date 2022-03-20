@@ -58,12 +58,15 @@ jobs:
 
       - name: Commit built files
         run: |
+          cd out
+          git init
+          git remote add origin jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
           git add . -f
           git commit -m "Automated deployment: ${{github.sha}}" --amend --no-edit --quiet
 
-      - name: Add git remote
-        run: |
-          git remote add live jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
+#      - name: Add git remote
+#        run: |
+#          git remote add live jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
 
       - name: Push Live
         run: |
