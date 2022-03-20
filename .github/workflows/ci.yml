@@ -50,7 +50,7 @@ jobs:
           key: build-${{ github.sha }}
           path: ./*
 
-      - name: Set Git Config
+      - name: Push Live
         run: |
           cd out
           pwd
@@ -62,12 +62,4 @@ jobs:
           git checkout -b master
           git add . -f
           git commit -m "Automated deployment: ${{github.sha}}"
-
-#      - name: Add git remote
-#        run: |
-#          git remote add live jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
-
-      - name: Push Live
-        run: |
-          git push origin main -f
-
+          git push origin master -f
