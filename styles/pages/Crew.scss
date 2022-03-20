@@ -1,0 +1,67 @@
+@import "/styles/imports/breakpoints.scss";
+
+.st-Crew {
+  background-image: url("../../public/assets/crew/background-crew-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  @include lg {
+    text-align: left;
+  }
+
+  * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  &-pageHeader {
+    @include md {
+      margin: 4rem 0;
+    }
+  }
+
+  &-slideControls {
+    z-index: 10;
+    @include xs {
+      margin: 2rem 0;
+    }
+    @include lg {
+      position: absolute;
+      bottom: 150;
+      left: 0;
+    }
+  }
+
+  &-Image {
+    height: 45vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    margin-top: 20px;
+
+    @include sm() {
+      height: 60vh;
+      max-height: 400px;
+    }
+    @include md() {
+      height: 50vh;
+      max-height: none;
+    }
+
+    @include lg() {
+      height: 700px;
+    }
+  }
+}

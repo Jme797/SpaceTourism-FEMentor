@@ -1,0 +1,19 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+/** 
+ *  font-family: 'Barlow Condensed', sans-serif;
+ *  font-family: 'Bellefair', serif; 
+*/
+
+// Import Base Sass styles
+@import './base/normalize.scss';
+@import './base/typography.scss';
+@import './base/links.scss';
+@import './base/button.scss';
+
+// Import Page styles (Potentially make this component specific later)
+@import './pages/Home.scss';
+@import './pages/Destination.scss';
+@import './pages/Crew.scss';
+@import './pages/Technology.scss';

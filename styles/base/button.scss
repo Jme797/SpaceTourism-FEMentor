@@ -1,0 +1,8 @@
+button {
+  cursor: pointer;
+  
+  &.reset {
+    background: none;
+    border: none;
+  }
+}

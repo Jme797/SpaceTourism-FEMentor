@@ -1,0 +1,14 @@
+@import "/styles/imports/colors.scss";
+
+.Dot {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-color: $white;
+  opacity: 0.2;
+  border-radius: 50%;
+}
+
+.Active {
+  opacity: 1;
+}

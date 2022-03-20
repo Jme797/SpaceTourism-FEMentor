@@ -1,0 +1,26 @@
+@import "/styles/imports/breakpoints.scss";
+
+.Centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include md {
+    width: 100%;
+  }
+}
+.Vertical {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.Horizontal {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  transform: translateX(-50%);
+}

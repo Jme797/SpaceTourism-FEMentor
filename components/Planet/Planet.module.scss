@@ -1,0 +1,29 @@
+@import '../../styles/imports/colors.scss';
+@import '../../styles/imports/breakpoints.scss';
+
+.Planet {
+  display: flex;
+
+  img {
+    height: 150px;
+    width: 150px;
+    max-width: 50%;
+    aspect-ratio: 1/1;
+
+    @include lg {
+      width: 80%;
+      height: auto;
+      max-width: none;
+    }
+  }
+
+  hr {
+    margin: 30px 0 10px 0;
+    opacity: 0.2;
+    box-shadow: 2px 3px 4px $white;
+
+    @include md {
+      margin: 60px 0 20px 0;
+    }
+  }
+}

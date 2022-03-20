@@ -1,0 +1,35 @@
+@import "/styles/imports/breakpoints.scss";
+
+.PageContainer {
+  width: 300px;
+  position: relative;
+  min-height: 100vh;
+  
+  @include md {
+    width: 740px;
+  }
+
+  @include lg {
+    width: 1024px;
+  }
+
+  @include xl {
+    width: 1268px;
+  }
+  
+  @include xxl {
+    width: 1468px;
+  }
+}
+
+.Left {
+  margin-right: auto;
+}
+
+.Right {
+  margin-left: auto;
+}
+
+.Centered {
+  margin: 0 auto;
+}
