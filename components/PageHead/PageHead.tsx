@@ -23,7 +23,9 @@ const PageHead: FunctionComponent<Props> = ({ children, title }: Props) => (
       width: "100%",
     }}>
       <Link href="/">
-      <img style={{ position: "fixed", left: 0, top: 0, zIndex: 20, padding: "30px" }} src="/assets/shared/logo.svg" width={40} height={40} />
+        <a style={{ position: "fixed", left: 0, top: 0, zIndex: 20, padding: "30px" }}>
+          <img src="/assets/shared/logo.svg" width={40} height={40} />
+        </a>
       </Link>
       <Navbar />
     </div>
