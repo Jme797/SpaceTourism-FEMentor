@@ -69,11 +69,11 @@ const Crew: NextPage<Props> = ({ crew }: Props) => {
         <PageContainer centered>
           <FixedBottom elRef={crewComponent}>
             {crew.map((crewMember, i) => (
-              <>
+              <div key={i}>
                 <FixedBottom pointerEvents={i == activeSlide}>
                   <CrewMember visible={i == activeSlide} crew={crewMember} setActiveSlide={setActiveSlide} activeSlide={activeSlide} slideCount={crew.length} swipeDirectionRight={swipeDirectionRight}></CrewMember>
                 </FixedBottom>
-              </>
+              </div>
             ))}
           </FixedBottom>
         </PageContainer>

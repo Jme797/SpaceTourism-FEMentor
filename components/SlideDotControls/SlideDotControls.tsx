@@ -26,7 +26,7 @@ const SlideDotControls: FunctionComponent<Props> = ({ slideCount, setSlideNumber
     return dots
   }
   return (
-    <div style={{ pointerEvents: "none" }}>
+    <div data-test-id="slide-dot-controls" style={{ pointerEvents: "none" }}>
       {createDots()}
     </div>
   )

@@ -34,7 +34,7 @@ const Navbar: FunctionComponent = ({ }: Props) => {
     return (
       <nav className={styles.MobileNav}>
         <div className={styles.CloseButton}>
-          <button onClick={() => setNavActive(false)} className={`reset`}>
+          <button aria-label="close menu" onClick={() => setNavActive(false)} className={`reset`}>
             <img src='/assets/shared/icon-close.svg' />
           </button>
         </div>
@@ -54,7 +54,7 @@ const Navbar: FunctionComponent = ({ }: Props) => {
   return (
     <nav className={styles.hamburger}>
       <div>
-        <button onClick={() => setNavActive(true)} className={`reset`}>
+        <button aria-label="open menu" onClick={() => setNavActive(true)} className={`reset`}>
           <img src='/assets/shared/icon-hamburger.svg' />
         </button>
       </div>
