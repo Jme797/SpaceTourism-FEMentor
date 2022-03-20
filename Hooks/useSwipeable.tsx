@@ -1,6 +1,3 @@
-import { COOKIE_NAME_PRERENDER_BYPASS } from "next/dist/server/api-utils"
-import { MutableRefObject } from "react"
-
 const useSwipeable = (element: HTMLDivElement, onSwipeLeft: Function, onSwipeRight: Function, leftPosition: string = "0px") => {
 
   let touchstartX = 0
