@@ -20,18 +20,13 @@ jobs:
         with:
           node-version: "14"
 
-      - name: Cache node modules
+      - name: Cache the build
         uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+        id: restore-build
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          key: build-${{ github.sha }}
+          path: ./*
+          restore-keys: build-${{ github.sha }}
 
       - name: Install Dependencies
         run: npm install
@@ -48,18 +43,12 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{secrets.KNOWN_HOSTS}}
 
-      - name: Restore Cache
+      - name: Restore the cached build
         uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+        id: restore-build
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          key: build-${{ github.sha }}
+          path: ./*
 
       - name: Commit built files
         run: |
