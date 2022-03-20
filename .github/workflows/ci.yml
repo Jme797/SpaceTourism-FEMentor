@@ -39,7 +39,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up SSH
-        if : ${{ github.sha == steps.head-ref.outputs.ref }}
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
         run: |
