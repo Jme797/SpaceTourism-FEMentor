@@ -61,7 +61,7 @@ jobs:
           git remote add origin jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
           git checkout -b master
           git add . -f
-          git commit -m "Automated deployment: ${{github.sha}}" --amend --no-edit --quiet
+          git commit -m "Automated deployment: ${{github.sha}}"
 
 #      - name: Add git remote
 #        run: |
