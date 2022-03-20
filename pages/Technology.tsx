@@ -4,7 +4,7 @@ import PageHead from '../components/PageHead/PageHead'
 
 import { breakpoints, Server } from '../Config'
 import PageContainer from "../Layout/PageContainer/PageContainer"
-import { FixedRight } from "../Layout/FixedBottom/Fixed"
+import { FixedRight } from "../Layout/Fixed/Fixed"
 import TwoColumn from "../Layout/TwoColumn/TwoColumn"
 import SlideNumberedControls from "../components/SlideNumberedControls/SlideNumberedControls"
 import useBreakpoint from "../Hooks/useBreakpoint"

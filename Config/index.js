@@ -1,6 +1,6 @@
 const isDev = process.env.NODE_ENV !== 'production';
 
-export const Server = isDev ? "http://localhost:3000/" : ""
+export const Server = isDev ? "http://localhost:3000/" : "http://spacetourism.jordanme.co.uk/"
 
 
 export const breakpoints = {
