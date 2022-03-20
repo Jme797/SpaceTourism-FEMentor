@@ -59,6 +59,7 @@ jobs:
           git config http.postBuffer 524288000
           git init
           git remote add origin jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
+          git checkout -b master
           git add . -f
           git commit -m "Automated deployment: ${{github.sha}}" --amend --no-edit --quiet
 
