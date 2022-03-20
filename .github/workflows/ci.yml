@@ -38,10 +38,18 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_KEY }}
-          known_hosts: ${{secrets.KNOWN_HOSTS}}
+      - name: Set up SSH
+        if : ${{ github.sha == steps.head-ref.outputs.ref }}
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 0700 ~/.ssh
+          touch ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_rsa
 
       - name: Restore the cached build
         uses: actions/cache@v2
