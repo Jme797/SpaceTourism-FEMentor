@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import Head from 'next/head'
 import Navbar from '../Navbar/Navbar';
+import Link from 'next/link';
 
 type Props = {
   children?: React.ReactNode,
@@ -21,7 +22,9 @@ const PageHead: FunctionComponent<Props> = ({ children, title }: Props) => (
       top: 0,
       width: "100%",
     }}>
+      <Link href="/">
       <img style={{ position: "fixed", left: 0, top: 0, zIndex: 20, padding: "30px" }} src="/assets/shared/logo.svg" width={40} height={40} />
+      </Link>
       <Navbar />
     </div>
 

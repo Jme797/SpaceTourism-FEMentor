@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm run build
+
 cd out
 git init
 git remote add origin jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
