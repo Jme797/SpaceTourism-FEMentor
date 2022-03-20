@@ -22,8 +22,9 @@ const useSwipeable = (element: HTMLDivElement, onSwipeLeft: Function, onSwipeRig
     handleGesture()
   }
 
+  element.setAttribute('data-test-id', 'swipeable-element')
   element.addEventListener('touchstart', touchStart)
-
+  
   return () => {
     element.removeEventListener('touchstart', touchStart)
     element.removeEventListener('touchend', touchEnd)

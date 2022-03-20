@@ -37,7 +37,7 @@ const Planet: FunctionComponent<Props> = ({ data }: Props) => {
                 <div>
                   <Tabs tabs={tabs} setActiveTab={setActiveTab} activeTab={activeTab} />
                   <div>
-                    <h1 className="font-l text-white">{planet.name}</h1>
+                    <h1 data-test-id="planet-name" className="font-l text-white">{planet.name}</h1>
                     <p className="font-base text-light-blue">{planet.description}</p>
                     <hr />
                     <TwoColumn collapse={false}>

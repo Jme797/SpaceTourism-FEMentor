@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <video className="st-Home-BackgroundVideo" autoPlay muted loop>
           <source src="/assets/EarthSpinning.mp4" type="video/mp4" />
         </video>
-{        <PageContainer centered>
+        {<PageContainer centered>
           <FixedBottom offset={offset}>
             <TwoColumn>
               <div>
@@ -27,7 +27,9 @@ const Home: NextPage = () => {
               </div>
               <div className='st-Home-MegaButton'>
                 <Link href={"/Destination"}>
-                  <img src='/assets/Explore-icon.svg' alt="Discover" width="250" height="250" />
+                  <a>
+                    <img src='/assets/Explore-icon.svg' alt="Discover" width="250" height="250" />
+                  </a>
                 </Link>
               </div>
             </TwoColumn>

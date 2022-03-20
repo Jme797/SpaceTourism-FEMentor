@@ -12,7 +12,7 @@ type Props = {
 
 const Tabs: FunctionComponent<Props> = ({ tabs, activeTab, setActiveTab }: Props) => {
   return (
-    <section className={Styles.Tabs}>
+    <section data-test-id="tabs" className={Styles.Tabs}>
       <ul className="reset">
         {tabs.map((tab: string, i: any) => (
           <li key={i}>
