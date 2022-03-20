@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd out
+git init
+git remote add origin jordanme.co.uk@ssh.stackcp.com:git_repos/space-tourism.git
+git checkout -b master
+git add . -f
+git commit -m "Automated deployment: Done Manually ;}"
+git push origin master -f
+
+cd ../

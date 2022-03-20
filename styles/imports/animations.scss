@@ -13,7 +13,7 @@
 $timing: 0.5s;
 
 .swipe {
-  transition: $timing ease-in;
+  transition: $timing ease-in !important;
 }
 
 .swipe-hidden {
@@ -28,6 +28,7 @@ $timing: 0.5s;
 
 .swipe-visible {
   transform: translateX(0) !important;
+  visibility: visible !important;
   &.swipe-right {
     animation: swipeLeft $timing ease-in reverse;
   }

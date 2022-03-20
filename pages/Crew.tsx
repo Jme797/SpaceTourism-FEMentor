@@ -94,7 +94,7 @@ type CrewProps = {
 const CrewMember: FunctionComponent<CrewProps> = ({ crew, setActiveSlide, activeSlide, slideCount, visible, swipeDirectionRight = false }: CrewProps) => {
 
   return (
-    <div className={`${swipeDirectionRight ? "swipe-left" : "swipe-right"} ${visible ? "swipe-visible" : "swipe-hidden"} swipe`}>
+    <div style={{visibility: "hidden"}} className={`${swipeDirectionRight ? "swipe-left" : "swipe-right"} ${visible ? "swipe-visible" : "swipe-hidden"} swipe`}>
       <TwoColumn>
         <>
           <PageHeader preText="02" title="Meet Your Crew" />
