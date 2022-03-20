@@ -12,29 +12,13 @@ const useSwipeable = (element: HTMLDivElement, onSwipeLeft: Function, onSwipeRig
     }
   }
 
-  function touchMove(e: TouchEvent) {
-    const mousePosition = {
-      x: e.changedTouches[0].clientX,
-      y: e.changedTouches[0].clientY
-    };
-    element.style.left = mousePosition.x + "px"
-  }
-
   function touchStart(e: TouchEvent) {
     element.addEventListener('touchend', touchEnd)
-    document.addEventListener('touchmove', touchMove)
     touchstartX = e.changedTouches[0].clientX
-    element.style.transform = "translateX(-50%)"
-    element.style.transition = "0s"
-    element.style.left = e.changedTouches[0].clientX + "px"
   }
 
   function touchEnd(e: TouchEvent) {
     touchendX = e.changedTouches[0].clientX
-    element.style.transition = "0.3s"
-    element.style.left = leftPosition
-    element.style.transform = ""
-    document.removeEventListener('touchmove', touchMove)
     handleGesture()
   }
 
@@ -43,7 +27,6 @@ const useSwipeable = (element: HTMLDivElement, onSwipeLeft: Function, onSwipeRig
   return () => {
     element.removeEventListener('touchstart', touchStart)
     element.removeEventListener('touchend', touchEnd)
-    document.removeEventListener('touchmove', touchMove)
   }
 }
 

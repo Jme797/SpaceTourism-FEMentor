@@ -1,8 +1,56 @@
+@import "./breakpoints.scss";
+
 @keyframes slideInRight {
   0% {
     right: -100%;
   }
   100% {
     right: 0px;
+  }
+}
+
+// Swipe Animations.
+$timing: 0.5s;
+
+.swipe {
+  transition: $timing ease-in;
+}
+
+.swipe-hidden {
+  visibility: hidden;
+  &.swipe-left {
+    transform: translateX(-100vw);
+  }
+  &.swipe-right {
+    transform: translateX(100vw);
+  }
+}
+
+.swipe-visible {
+  transform: translateX(0) !important;
+  &.swipe-right {
+    animation: swipeLeft $timing ease-in reverse;
+  }
+  &.swipe-left {
+    animation: swipeRight $timing ease-in reverse;
+  }
+  
+}
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes swipeRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
   }
 }
